@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forestech SpA | Servicios Forestales</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background-image:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+color:white;
+}
+
+/* BARRA SUPERIOR */
+.top-bar{
+position:fixed;
+top:0;
+width:100%;
+z-index:1000;
+}
+
+header{
+background:#3b2a1a;
+padding:15px;
+text-align:center;
+position:relative;
+}
+
+header h1{
+font-size:28px;
+}
+
+/* BOTON HAMBURGUESA */
+.menu-btn{
+display:none;
+position:absolute;
+right:20px;
+top:18px;
+font-size:28px;
+cursor:pointer;
+}
+
+/* MENU */
+nav{
+background:#2b1d12;
+display:flex;
+justify-content:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+padding:14px 22px;
+display:block;
+}
+
+nav a:hover{
+background:#5a3d26;
+}
+
+/* SECCIONES */
+
+section{
+padding:80px 0;
+padding-top:140px;
+background:rgba(0,0,0,0.6);
+scroll-margin-top:120px;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:0 20px;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+/* CAJA TRANSLUCIDA ANCHO TOTAL */
+
+.full-box{
+background:rgba(0,0,0,0.55);
+padding:30px;
+width:100%;
+margin:20px 0;
+}
+
+.full-box p{
+max-width:1100px;
+margin:auto;
+text-align:center;
+line-height:1.6;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.service-box{
+background:rgba(59,42,26,0.95);
+padding:25px;
+border-radius:8px;
+text-align:center;
+}
+
+footer{
+background:#3b2a1a;
+text-align:center;
+padding:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.menu-btn{
+display:block;
+}
+
+nav{
+display:none;
+flex-direction:column;
+}
+
+nav.active{
+display:flex;
+}
+
+nav a{
+border-top:1px solid rgba(255,255,255,0.1);
+text-align:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+
+<header>
+<h1>ForesTech SpA.</h1>
+
+<div class="menu-btn" onclick="toggleMenu()">
+☰
+</div>
+
+</header>
+
+<nav id="menu">
+
+<a href="#inicio">Inicio</a>
+<a href="#quienes">Quiénes Somos</a>
+<a href="#servicios">Nuestros Servicios</a>
+<a href="#contacto">Contacto</a>
+
+</nav>
+
+</div>
+
+
+<section id="inicio">
+
+<div class="container">
+<h2>Servicios Forestales, Industriales y Ambientales</h2>
+</div>
+
+<div class="full-box">
+<p>
+Prestación de servicios forestales, silvícolas y ambientales; explotación, manejo y mantención de predios forestales;
+servicios de tala, poda, reforestación y transporte de productos forestales; arriendo, operación y mantención
+de maquinaria y equipos industriales; ejecución de obras civiles menores y servicios industriales asociados al rubro forestal.
+</p>
+</div>
+
+</section>
+
+
+<section id="quienes">
+
+<div class="container">
+<h2>Quiénes Somos</h2>
+</div>
+
+<div class="full-box">
+<p>
+En ForesTech SpA contamos con una trayectoria de aproximadamente 20 años en el rubro forestal e industrial,
+desarrollando soluciones eficientes, seguras y responsables con el medio ambiente.
+Nuestro compromiso es entregar servicios de alta calidad.
+</p>
+</div>
+
+</section>
+
+
+<section id="servicios">
+<div class="container">
+
+<h2>Nuestros Servicios</h2>
+
+<div class="services-grid">
+
+<div class="service-box">
+<h3>Tala Forestal</h3>
+<p>Servicios profesionales de tala controlada.</p>
+</div>
+
+<div class="service-box">
+<h3>Poda</h3>
+<p>Poda técnica para mantención forestal.</p>
+</div>
+
+<div class="service-box">
+<h3>Plantación</h3>
+<p>Establecimiento de plantaciones forestales.</p>
+</div>
+
+<div class="service-box">
+<h3>Raleo</h3>
+<p>Manejo silvícola especializado.</p>
+</div>
+
+<div class="service-box">
+<h3>Transporte</h3>
+<p>Transporte de productos forestales.</p>
+</div>
+
+<div class="service-box">
+<h3>Maquinaria</h3>
+<p>Arriendo de equipos forestales.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section id="contacto">
+
+<div class="container">
+<h2>Contacto</h2>
+</div>
+
+<div class="full-box">
+
+<p>
+Email: contacto@forestechspa.cl<br>
+Teléfono: +56 9 0000 0000<br>
+Casa Matríz: Santiago Región Metropolitana<br>
+Sucursal: Valdivia Región de Los Rios<br>
+Chile
+</p>
+
+</div>
+
+</section>
+
+
+<footer>
+© 2026 ForesTech SpA.
+</footer>
+
+
+<script>
+
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+
+</script>
+
+</body>
+</html>
